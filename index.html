@@ -102,7 +102,11 @@
                         <p class="text-gray-600 mb-4">
                             **Toma el control financiero.** Conviértete en un estratega que analiza estados financieros y optimiza la gestión de recursos para impulsar el negocio.
                         </p>
-                        <button onclick="showCurriculum('ContabilidadFinanzas')" class="w-full px-4 py-2 bg-green-600 text-white font-medium rounded-lg shadow-md hover:bg-green-700 transition duration-150">Ver Plan de Estudios</button>
+                        <!-- DOBLE BOTÓN agregado para Plan y Perfil/Alcance de Contabilidad -->
+                        <div class="grid grid-cols-2 gap-3">
+                            <button onclick="showCurriculum('ContabilidadFinanzas')" class="w-full px-2 py-2 bg-green-600 text-white text-sm font-medium rounded-lg shadow-md hover:bg-green-700 transition duration-150">Ver Plan de Estudios</button>
+                            <button onclick="showCurriculum('ContabilidadFinanzasProfile')" class="w-full px-2 py-2 bg-green-400 text-white text-sm font-medium rounded-lg shadow-md hover:bg-green-500 transition duration-150">Perfil y Alcance</button>
+                        </div>
                     </div>
                 </div>
 
@@ -291,11 +295,11 @@
                     <ul class="list-disc list-inside space-y-2">
                         <li>
                             <strong class="font-semibold text-lg text-orange-800">Nivel 10: Fundamentos y Dibujo Técnico</strong>
-                            <p class="ml-4 text-gray-600 mt-1">Introducción a la obra y las herramientas básicas de planificación.</p>
+                            <p class="ml-4 text-gray-600 mt-1">Introducción a la obra, materiales y herramientas básicas de planificación.</p>
                             <ul class="list-circle list-inside ml-8 text-sm text-gray-700 space-y-1">
                                 <li>**Construcción de Obras Civiles I:** Nociones básicas de la construcción, seguridad y materiales.</li>
+                                <li>**Presupuesto y Herramientas Informáticas I:** Introducción a la cuantificación de materiales y presupuestos.</li>
                                 <li>**Dibujo Técnico I:** Interpretación y creación de planos arquitectónicos básicos.</li>
-                                <li>**Presupuesto y Herramientas Informáticas I:** Introducción a la cuantificación de materiales.</li>
                                 <li>**English for Communication I:** Vocabulario técnico y comunicativo.</li>
                             </ul>
                         </li>
@@ -368,6 +372,51 @@
                         </li>
                     </ul>
                     <p class="mt-6 text-sm text-gray-500 italic">Duración: 3 años de formación técnica (10°, 11° y 12°)</p>
+                `
+            },
+            'ContabilidadFinanzasProfile': {
+                title: 'Perfil y Alcance Profesional: Contabilidad y Finanzas',
+                content: `
+                    <h4 class="text-xl font-bold mb-3 text-green-700">Función Principal y Justificación</h4>
+                    <p class="mb-4">
+                        La especialidad se centra en el **análisis y la evaluación de proyectos de inversión** a corto, mediano y largo plazo, junto con la viabilidad financiera. El estudio se enfoca en las operaciones de la empresa y la **gestión de recursos económicos y monetarios** disponibles.
+                        Su función principal es ejercer el control y registro de todas las actividades económicas para obtener **información crucial para la toma de decisiones** sobre inversión y captación de recursos.
+                    </p>
+
+                    <h4 class="text-xl font-bold mb-3 text-green-700">Perfil del Egresado y Competencias Clave</h4>
+                    <p class="mb-2">El egresado debe dominar:</p>
+                    <ul class="list-disc list-inside ml-4 space-y-2">
+                        <li>
+                            **Conocimiento Técnico:** Dominar los conceptos básicos y elementos contables, y analizarlos financieramente para la toma de decisiones.
+                        </li>
+                        <li>
+                            **Competencia General:** Analizar procesos de recolección, registro y tratamiento de la información contable y financiera, utilizando **herramientas tecnológicas** y cumpliendo con la **normativa y legislación vigente**.
+                        </li>
+                        <li>
+                            **Valores:** Desempeño ético, responsabilidad y compromiso en sus funciones.
+                        </li>
+                    </ul>
+
+                    <h4 class="text-xl font-bold mt-4 mb-3 text-green-700">Áreas de Enfoque Curricular</h4>
+                    <ul class="list-disc list-inside ml-4 space-y-2">
+                        <li>
+                            **Contabilidad IFRS (Décimo nivel):** Se enfoca en el ciclo contable completo, desde el registro inicial hasta la preparación de estados financieros (estado de resultados, estado de cambio en la posición financiera, etc.), incluyendo contabilidad para casa matriz y sucursales.
+                        </li>
+                        <li>
+                            **Gestión en Tecnologías Digitales (Décimo nivel):** Desarrollo de competencias en software de aplicación (hojas electrónicas, presentaciones), introducción a la Ciberseguridad, IoT, el Sistema de Pago Electrónico (**SINPE**) y estadística aplicada a las finanzas.
+                        </li>
+                        <li>
+                            **Gestión Empresarial (Undécimo nivel):** Administración, recursos humanos, mercadeo, ventas, planificación y evaluación de proyectos, y gestión comercial y pública (**SICOP**), con énfasis en el emprendimiento.
+                        </li>
+                        <li>
+                            **Gestión en Costos (Duodécimo nivel):** Introducción a costos, costos por órdenes específicas y por procesos, cálculo de variaciones del costo, **planificación presupuestaria** y administración de inventarios.
+                        </li>
+                        <li>
+                            **English Oriented to Accounting and Finance:** Inglés para Fines Específicos (ESP), buscando que el estudiante finalice como un **Usuario Independiente de Inglés (B1)** según el MCER.
+                        </li>
+                    </ul>
+                    
+                    <p class="mt-6 text-sm text-gray-500 italic">Fuente: Resumen del Programa de Estudio Oficial - Contabilidad y Finanzas.</p>
                 `
             },
             'EjecutivoComercial': {
