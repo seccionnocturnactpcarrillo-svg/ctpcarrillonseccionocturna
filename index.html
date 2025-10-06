@@ -51,7 +51,6 @@
 
                 <!-- Tarjeta 1: Informática -->
                 <div class="bg-white rounded-xl border border-gray-200 shadow-2xl overflow-hidden hover:border-indigo-500 hover:shadow-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <!-- Imagen de relleno restaurada -->
                     <img src="https://placehold.co/600x400/3B82F6/ffffff?text=Redes+y+Sistemas" 
                          alt="Imagen de un cable de red y un servidor" 
                          class="w-full h-48 object-cover object-center"
@@ -121,7 +120,11 @@
                         <p class="text-gray-600 mb-4">
                             **El motor de las ventas.** Desarrolla habilidades persuasivas, técnicas de negociación avanzada y una maestría en servicio para conquistar cualquier mercado.
                         </p>
-                        <button onclick="showCurriculum('EjecutivoComercial')" class="w-full px-4 py-2 bg-red-600 text-white font-medium rounded-lg shadow-md hover:bg-red-700 transition duration-150">Ver Plan de Estudios</button>
+                        <!-- DOBLE BOTÓN agregado para Plan y Perfil/Alcance de Ejecutivo Comercial -->
+                        <div class="grid grid-cols-2 gap-3">
+                            <button onclick="showCurriculum('EjecutivoComercial')" class="w-full px-2 py-2 bg-red-600 text-white text-sm font-medium rounded-lg shadow-md hover:bg-red-700 transition duration-150">Ver Plan de Estudios</button>
+                            <button onclick="showCurriculum('EjecutivoComercialProfile')" class="w-full px-2 py-2 bg-red-400 text-white text-sm font-medium rounded-lg shadow-md hover:bg-red-500 transition duration-150">Perfil y Alcance</button>
+                        </div>
                     </div>
                 </div>
 
@@ -136,7 +139,11 @@
                         <p class="text-gray-600 mb-4">
                             **Liderazgo en la cocina.** Fusiona el arte culinario de alta gama con la gerencia de costos y personal para dirigir exitosos emprendimientos gastronómicos.
                         </p>
-                        <button onclick="showCurriculum('GerenciaCocina')" class="w-full px-4 py-2 bg-yellow-600 text-white font-medium rounded-lg shadow-md hover:bg-yellow-700 transition duration-150">Ver Plan de Estudios</button>
+                        <!-- DOBLE BOTÓN agregado para Plan y Perfil/Alcance de Cocina -->
+                        <div class="grid grid-cols-2 gap-3">
+                            <button onclick="showCurriculum('GerenciaCocina')" class="w-full px-2 py-2 bg-yellow-600 text-white text-sm font-medium rounded-lg shadow-md hover:bg-yellow-700 transition duration-150">Ver Plan de Estudios</button>
+                            <button onclick="showCurriculum('GerenciaCocinaProfile')" class="w-full px-2 py-2 bg-yellow-400 text-white text-sm font-medium rounded-lg shadow-md hover:bg-yellow-500 transition duration-150">Perfil y Alcance</button>
+                        </div>
                     </div>
                 </div>
 
@@ -151,7 +158,11 @@
                         <p class="text-gray-600 mb-4">
                             **Maestros de la hospitalidad.** Aprende a organizar operaciones de servicio y a crear experiencias de cliente memorables en restaurantes, bares y eventos.
                         </p>
-                        <button onclick="showCurriculum('ServiciosAlimentos')" class="w-full px-4 py-2 bg-sky-600 text-white font-medium rounded-lg shadow-md hover:bg-sky-700 transition duration-150">Ver Plan de Estudios</button>
+                        <!-- DOBLE BOTÓN agregado para Plan y Perfil/Alcance de Servicios de Alimentos y Bebidas -->
+                        <div class="grid grid-cols-2 gap-3">
+                            <button onclick="showCurriculum('ServiciosAlimentos')" class="w-full px-2 py-2 bg-sky-600 text-white text-sm font-medium rounded-lg shadow-md hover:bg-sky-700 transition duration-150">Ver Plan de Estudios</button>
+                            <button onclick="showCurriculum('ServiciosAlimentosProfile')" class="w-full px-2 py-2 bg-sky-400 text-white text-sm font-medium rounded-lg shadow-md hover:bg-sky-500 transition duration-150">Perfil y Alcance</button>
+                        </div>
                     </div>
                 </div>
 
@@ -227,6 +238,7 @@
     <script>
         // Objeto que almacena los planes de estudio por especialidad
         const curricula = {
+            // --- INFORMÁTICA ---
             'Informatica': {
                 title: 'Plan de Estudios: Informática',
                 content: `
@@ -265,26 +277,26 @@
             'InformaticaProfile': {
                 title: 'Perfil y Alcance Profesional: Informática',
                 content: `
-                    <h4 class="text-xl font-bold mb-3 text-indigo-700">Justificación de la Especialidad</h4>
+                    <h4 class="text-xl font-bold mb-3 text-indigo-700">Competencia General (Lo que logras hacer)</h4>
                     <p class="mb-4">
-                        La tecnología es el motor del siglo XXI. Esta especialidad responde a la necesidad crítica del mercado de contar con técnicos que puedan **planificar, configurar y mantener la infraestructura digital** de cualquier organización. Es fundamental para garantizar la operatividad y la **ciberseguridad** de los sistemas de información.
+                        El egresado será capaz de **instalar, configurar y administrar infraestructura de redes, sistemas operativos y servicios de comunicación** en un entorno empresarial, siguiendo estándares de calidad y seguridad, con el objetivo de optimizar la productividad y garantizar la disponibilidad de los recursos tecnológicos.
                     </p>
 
-                    <h4 class="text-xl font-bold mb-3 text-indigo-700">Perfil del Egresado (Lo que harás)</h4>
-                    <p class="mb-2">Al completar tu formación, serás un profesional capaz de:</p>
+                    <h4 class="text-xl font-bold mb-3 text-indigo-700">Perfil del Egresado (Alcance)</h4>
+                    <p class="mb-2">Al completar tu formación, serás un profesional con las siguientes habilidades:</p>
                     <ul class="list-disc list-inside ml-4 space-y-2">
-                        <li>**Administración de Redes:** Instalar, configurar y monitorear redes de área local (LAN) y extensa (WAN) según protocolos estándar (OSI/TCP-IP).</li>
-                        <li>**Soporte y Hardware:** Diagnosticar, ensamblar y dar soporte técnico avanzado a equipos de cómputo y sistemas operativos (Windows/Linux).</li>
-                        <li>**Servidores y Servicios:** Implementar y gestionar servicios esenciales de red como DNS, DHCP, servidores web y correo electrónico.</li>
-                        <li>**Seguridad Informática:** Aplicar políticas de seguridad, configurar sistemas de respaldo (backup) y mantener la integridad de los datos de la empresa.</li>
-                        <li>**Normativa:** Trabajar bajo las normas de seguridad y los estándares técnicos internacionales para cableado estructurado.</li>
-                        <li>**Valores Profesionales:** Demostrar calidad, responsabilidad, ética profesional y promover la salud ocupacional y el trabajo en equipo.</li>
-                        <li>**Objetivo General:** Formar técnicos en redes y sistemas operativos, con una visión integral, que sean competentes para el soporte de la infraestructura tecnológica y la aplicación de protocolos de seguridad en el ámbito empresarial.</li>
+                        <li>**Configuración de Redes:** Implementar y gestionar redes de área local (LAN) y extensa (WAN), asegurando la conectividad y el rendimiento óptimo.</li>
+                        <li>**Servidores y Servicios:** Instalar y administrar servidores, incluyendo servicios esenciales como DHCP, DNS, FTP y correo electrónico.</li>
+                        <li>**Soporte Técnico Especializado:** Diagnosticar y resolver problemas complejos de hardware, software y conectividad.</li>
+                        <li>**Virtualización:** Aplicar técnicas de virtualización para la optimización de recursos y el despliegue eficiente de sistemas.</li>
+                        <li>**Seguridad:** Implementar medidas básicas de ciberseguridad para proteger la red y los sistemas de información contra amenazas.</li>
+                        <li>**Valores Profesionales:** Demostrar una fuerte ética profesional, responsabilidad, compromiso con la calidad y capacidad para el trabajo en equipo.</li>
                     </ul>
                     
-                    <p class="mt-6 text-sm text-gray-500 italic">Fuente: Programa de Estudio Oficial - Nivel X.</p>
+                    <p class="mt-6 text-sm text-gray-500 italic">Fuente: Programa de Estudio Oficial - Configuración y Soporte a Redes y Sistemas Operativos.</p>
                 `
             },
+            // --- CONSTRUCCIÓN CIVIL ---
             'ConstruccionCivil': {
                 title: 'Plan de Estudios: Construcción Civil',
                 content: `
@@ -297,59 +309,69 @@
                             <strong class="font-semibold text-lg text-orange-800">Nivel 10: Fundamentos y Dibujo Técnico</strong>
                             <p class="ml-4 text-gray-600 mt-1">Introducción a la obra, materiales y herramientas básicas de planificación.</p>
                             <ul class="list-circle list-inside ml-8 text-sm text-gray-700 space-y-1">
-                                <li>**Construcción de Obras Civiles I:** Nociones básicas de la construcción, seguridad y materiales.</li>
-                                <li>**Presupuesto y Herramientas Informáticas I:** Introducción a la cuantificación de materiales y presupuestos.</li>
-                                <li>**Dibujo Técnico I:** Interpretación y creación de planos arquitectónicos básicos.</li>
-                                <li>**English for Communication I:** Vocabulario técnico y comunicativo.</li>
+                                <li>**Construcción de Obras Civiles I:** Nociones básicas de la construcción, seguridad y materiales (12 horas semanales).</li>
+                                <li>**Presupuesto y Herramientas Informáticas I:** Introducción a la cuantificación de materiales y presupuestos (6 horas semanales).</li>
+                                <li>**Dibujo Técnico I:** Interpretación y creación de planos arquitectónicos básicos (4 horas semanales).</li>
+                                <li>**English for communication I:** Vocabulario técnico y comunicativo (2 horas semanales).</li>
                             </ul>
                         </li>
                         <li>
                             <strong class="font-semibold text-lg text-orange-800">Nivel 11: Ejecución, Presupuesto y Planificación</strong>
                             <p class="ml-4 text-gray-600 mt-1">Enfoque en la ejecución de la obra y el dominio de costos y planificación de proyectos.</p>
                             <ul class="list-circle list-inside ml-8 text-sm text-gray-700 space-y-1">
-                                <li>**Construcción de Obras Civiles II:** Aplicación de técnicas de construcción avanzadas, albañilería, estructuras y acabados.</li>
-                                <li>**Presupuesto y Herramientas Informáticas II:** Cálculo de costos, manejo de software especializado (ej. AutoCAD/Revit) y gestión de inventarios de obra.</li>
-                                <li>**Dibujo Técnico II:** Diseño y modelado de elementos estructurales y detalles constructivos.</li>
-                                <li>**English for Communication II:** Conversación técnica y redacción de informes de avance.</li>
+                                <li>**Construcción de Obras Civiles II:** Aplicación de técnicas de construcción avanzadas, albañilería, estructuras y acabados (12 horas semanales).</li>
+                                <li>**Presupuesto y Herramientas Informáticas II:** Cálculo de costos, manejo de software especializado (ej. AutoCAD/Revit) y gestión de inventarios de obra (6 horas semanales).</li>
+                                <li>**Dibujo Técnico II:** Diseño y modelado de elementos estructurales y detalles constructivos (4 horas semanales).</li>
+                                <li>**English for communication II:** Conversación técnica y redacción de informes de avance (2 horas semanales).</li>
                             </ul>
                         </li>
                         <li>
                             <strong class="font-semibold text-lg text-orange-800">Nivel 12: Gestión, Calidad y Práctica Profesional</strong>
                             <p class="ml-4 text-gray-600 mt-1">Culminación del programa, enfocado en la supervisión de la calidad, la gestión del proyecto final y la inserción laboral.</p>
                             <ul class="list-circle list-inside ml-8 text-sm text-gray-700 space-y-1">
-                                <li>**Construcción de Obras Civiles III:** Supervisión de obra, control de calidad, aspectos de seguridad y normativa legal en la construcción.</li>
-                                <li>**Presupuesto y Herramientas Informáticas III:** Elaboración y presentación del presupuesto final del proyecto, y uso avanzado de software de gestión.</li>
-                                <li>**Dibujo Técnico III:** Presentación de planos finales del proyecto técnico y detalles constructivos avanzados.</li>
-                                <li>**English for Communication III:** Preparación y presentación oral de la Práctica Profesional.</li>
+                                <li>**Construcción de Obras Civiles III:** Supervisión de obra, control de calidad, aspectos de seguridad y normativa legal en la construcción (12 horas semanales).</li>
+                                <li>**Presupuesto y Herramientas Informáticas III:** Elaboración y presentación del presupuesto final del proyecto, y uso avanzado de software de gestión (6 horas semanales).</li>
+                                <li>**Dibujo Técnico III:** Presentación de planos finales del proyecto técnico y detalles constructivos avanzados (4 horas semanales).</li>
+                                <li>**English for communication III:** Preparación y presentación oral de la Práctica Profesional (2 horas semanales).</li>
                                 <li>**Práctica Profesional Dirigida:** Aplicación de todos los conocimientos en un entorno laboral real.</li>
                             </ul>
                         </li>
                     </ul>
-                    <p class="mt-6 text-sm text-gray-500 italic">Duración: 3 años de formación técnica (10°, 11° y 12°)</p>
+                    <p class="mt-6 text-sm text-gray-500 italic">Duración: 3 años de formación técnica (10°, 11° y 12°). **Total 24 horas técnicas por nivel.**</p>
                 `
             },
             'ConstruccionCivilProfile': {
                 title: 'Perfil y Alcance Profesional: Construcción Civil',
                 content: `
-                    <h4 class="text-xl font-bold mb-3 text-orange-700">Justificación: La Fuerza de Ingeniería en Obra</h4>
+                    <h4 class="text-xl font-bold mb-3 text-orange-700">Competencia General (Perfil Profesional)</h4>
                     <p class="mb-4">
-                        Esta especialidad forma técnicos capaces de **interpretar planos y dirigir la ejecución** de proyectos de construcción, desde la planificación hasta la entrega final, enfocándose en la calidad, la seguridad y la eficiencia en el uso de recursos.
+                        El Técnico en Construcción Civil es un profesional de nivel medio que **interpreta la información técnica** y **dirige procesos de producción** en obras civiles. Se enfoca en la planificación, el uso de herramientas informáticas (CAD/Presupuesto) y la aplicación rigurosa de normas de calidad y salud ocupacional.
                     </p>
 
-                    <h4 class="text-xl font-bold mb-3 text-orange-700">Competencias Clave del Egresado (Perfil Profesional)</h4>
-                    <p class="mb-2">Al obtener el Título de Técnico en Construcción Civil, podrás:</p>
+                    <h4 class="text-xl font-bold mb-3 text-orange-700">Habilidades y Alcance del Egresado</h4>
+                    <p class="mb-2">Al obtener el Título de Técnico, el egresado podrá:</p>
                     <ul class="list-disc list-inside ml-4 space-y-2">
-                        <li>**Interpretación y Comunicación:** Transmitir instrucciones técnicas y entender información gráfica normalizada (planos).</li>
-                        <li>**Ejecución de Obra:** Dirigir procesos de producción, aplicando destreza en las tareas propias de la especialidad.</li>
-                        <li>**Gestión de Proyectos:** Elaborar y evaluar proyectos relacionados con la especialidad.</li>
-                        <li>**Administración:** Utilizar herramientas informáticas, aplicar mantenimiento preventivo/correctivo de equipos y administrar pequeñas empresas de construcción.</li>
-                        <li>**Valores Profesionales:** Demostrar calidad, responsabilidad, ética profesional y promover la salud ocupacional y el trabajo en equipo.</li>
-                        <li>**Proyección:** Poseer las bases necesarias para continuar estudios superiores en ingeniería o arquitectura.</li>
+                        <li>**Comunicación Técnica:** Transmitir instrucciones claras y precisas, empleando la comunicación gráfica normalizada (planos).</li>
+                        <li>**Ejecución de Obra:** Demostrar habilidad y destreza en tareas propias de la especialidad, dirigiendo procesos de producción bajo supervisión.</li>
+                        <li>**Gestión:** Elaborar, evaluar y proponer soluciones a proyectos de construcción, y utilizar la computadora como herramienta esencial.</li>
+                        <li>**Administración de Empresas:** Poseer la capacidad de administrar pequeñas empresas o talleres de construcción.</li>
+                        <li>**Mantenimiento:** Aplicar sistemas de mantenimiento preventivo y correctivo en equipo, maquinaria y herramienta.</li>
+                        <li>**Proyección:** Poseer la base necesaria para continuar estudios superiores en el campo de la ingeniería o arquitectura.</li>
+                        <li>**Valores:** Demostrar ética, responsabilidad, calidad y reconocer la relación entre salud ocupacional y el ambiente.</li>
                     </ul>
 
-                    <p class="mt-6 text-sm text-gray-500 italic">Fuente: Perfil Profesional, Nivel Medio - MEP.</p>
+                    <h4 class="text-xl font-bold mt-4 mb-3 text-orange-700">Objetivos del Programa (Lo que se busca en el estudiante)</h4>
+                    <ul class="list-disc list-inside ml-4 space-y-2">
+                        <li>Utilizar las herramientas básicas del idioma inglés para interpretar manuales técnicos.</li>
+                        <li>Aplicar los principios del dibujo técnico en diferentes tareas de la construcción civil.</li>
+                        <li>Organizar diferentes tipos de trabajo que demandan los procesos de construcción.</li>
+                        <li>Preparar técnicos que incorporen conceptos de salud ocupacional para la prevención de accidentes.</li>
+                    </ul>
+
+                    <p class="mt-6 text-sm text-gray-500 italic">Fuente: Perfil Profesional - Especialidad Construcción Civil - MEP.</p>
                 `
             },
+            // --- CONTABILIDAD Y FINANZAS (Ya completado en el paso anterior) ---
             'ContabilidadFinanzas': {
                 title: 'Plan de Estudios: Contabilidad y Finanzas',
                 content: `
@@ -360,15 +382,15 @@
                     <ul class="list-disc list-inside space-y-2">
                         <li>
                             <strong class="font-semibold text-lg">Nivel 10:</strong>
-                            <span class="block ml-4 text-gray-600">Contabilidad Básica y Principios Financieros, Legislación Comercial, Paquetes Contables I.</span>
+                            <span class="block ml-4 text-gray-600">Contabilidad Básica (IFRS) y Principios Financieros, Legislación Comercial, Paquetes Contables I, Gestión en Tecnologías Digitales.</span>
                         </li>
                         <li>
                             <strong class="font-semibold text-lg">Nivel 11:</strong>
-                            <span class="block ml-4 text-gray-600">Contabilidad de Costos, Análisis de Estados Financieros, Gestión Tributaria y Planillas.</span>
+                            <span class="block ml-4 text-gray-600">Contabilidad de Costos, Análisis de Estados Financieros, Gestión Tributaria y Planillas, Gestión Empresarial para Financistas.</span>
                         </li>
                         <li>
                             <strong class="font-semibold text-lg">Nivel 12:</strong>
-                            <span class="block ml-4 text-gray-600">Formulación y Evaluación de Proyectos, Finanzas Empresariales, Práctica Profesional Dirigida.</span>
+                            <span class="block ml-4 text-gray-600">Formulación y Evaluación de Proyectos, Finanzas Empresariales, Gestión en Costos Avanzada, Práctica Profesional Dirigida.</span>
                         </li>
                     </ul>
                     <p class="mt-6 text-sm text-gray-500 italic">Duración: 3 años de formación técnica (10°, 11° y 12°)</p>
@@ -419,6 +441,7 @@
                     <p class="mt-6 text-sm text-gray-500 italic">Fuente: Resumen del Programa de Estudio Oficial - Contabilidad y Finanzas.</p>
                 `
             },
+            // --- EJECUTIVO COMERCIAL ---
             'EjecutivoComercial': {
                 title: 'Plan de Estudios: Ejecutivo Comercial y Servicio al Cliente',
                 content: `
@@ -429,20 +452,42 @@
                     <ul class="list-disc list-inside space-y-2">
                         <li>
                             <strong class="font-semibold text-lg">Nivel 10:</strong>
-                            <span class="block ml-4 text-gray-600">Fundamentos de Marketing, Técnicas de Venta y Negociación, Comunicación Comercial Efectiva.</span>
+                            <span class="block ml-4 text-gray-600">Fundamentos de Marketing (4 hs), Técnicas de Venta y Negociación (6 hs), Comunicación Comercial Efectiva (4 hs).</span>
                         </li>
                         <li>
                             <strong class="font-semibold text-lg">Nivel 11:</strong>
-                            <span class="block ml-4 text-gray-600">Estrategias de Servicio al Cliente (CRM), Marketing Digital y Redes Sociales, Inglés Técnico Comercial.</span>
+                            <span class="block ml-4 text-gray-600">Estrategias de Servicio al Cliente (CRM) (4 hs), Marketing Digital y Redes Sociales (6 hs), Inglés Técnico Comercial (2 hs).</span>
                         </li>
                         <li>
                             <strong class="font-semibold text-lg">Nivel 12:</strong>
-                            <span class="block ml-4 text-gray-600">Gestión Comercial y Logística de Ventas, Investigación de Mercados, Práctica Profesional Dirigida.</span>
+                            <span class="block ml-4 text-gray-600">Gestión Comercial y Logística de Ventas (6 hs), Investigación de Mercados (4 hs), Práctica Profesional Dirigida.</span>
                         </li>
                     </ul>
                     <p class="mt-6 text-sm text-gray-500 italic">Duración: 3 años de formación técnica (10°, 11° y 12°)</p>
                 `
             },
+            'EjecutivoComercialProfile': {
+                title: 'Perfil y Alcance Profesional: Ejecutivo Comercial',
+                content: `
+                    <h4 class="text-xl font-bold mb-3 text-red-700">Competencia General</h4>
+                    <p class="mb-4">
+                        Formar profesionales capaces de **diseñar y ejecutar estrategias comerciales** efectivas, manejar técnicas de negociación y venta, y proporcionar una experiencia de **servicio al cliente excepcional**, utilizando herramientas digitales y cumpliendo con la normativa legal vigente.
+                    </p>
+
+                    <h4 class="text-xl font-bold mb-3 text-red-700">Perfil del Egresado (Alcance)</h4>
+                    <p class="mb-2">El técnico podrá desempeñarse en las siguientes áreas:</p>
+                    <ul class="list-disc list-inside ml-4 space-y-2">
+                        <li>**Ventas y Negociación:** Aplicar técnicas de venta consultiva, manejar objeciones y cerrar acuerdos comerciales.</li>
+                        <li>**Marketing Digital:** Utilizar plataformas de redes sociales y herramientas digitales para promover productos y servicios.</li>
+                        <li>**Servicio al Cliente:** Gestionar la relación con los clientes (CRM), resolver conflictos y garantizar la satisfacción post-venta.</li>
+                        <li>**Logística Comercial:** Organizar la distribución, inventarios y el proceso de entrega de bienes.</li>
+                        <li>**Investigación de Mercados:** Recolectar y analizar información para identificar oportunidades y amenazas del mercado.</li>
+                        <li>**Emprendimiento:** Poseer la visión para crear, planificar y desarrollar su propia empresa de servicios o consultoría comercial.</li>
+                    </ul>
+                    <p class="mt-6 text-sm text-gray-500 italic">Fuente: Basado en el Perfil Profesional de Especialidades de Servicios Comerciales.</p>
+                `
+            },
+            // --- GERENCIA Y PRODUCCIÓN EN COCINA ---
             'GerenciaCocina': {
                 title: 'Plan de Estudios: Gerencia y Producción en Cocina',
                 content: `
@@ -467,6 +512,27 @@
                     <p class="mt-6 text-sm text-gray-500 italic">Duración: 3 años de formación técnica (10°, 11° y 12°)</p>
                 `
             },
+            'GerenciaCocinaProfile': {
+                title: 'Perfil y Alcance Profesional: Gerencia y Producción en Cocina',
+                content: `
+                    <h4 class="text-xl font-bold mb-3 text-yellow-700">Competencia General</h4>
+                    <p class="mb-4">
+                        El egresado será capaz de **gestionar, planificar y supervisar** todas las fases de la producción culinaria, desde la compra de insumos hasta la presentación final, asegurando el cumplimiento de los más altos estándares de calidad, higiene y rentabilidad económica.
+                    </p>
+
+                    <h4 class="text-xl font-bold mb-3 text-yellow-700">Perfil del Egresado (Alcance)</h4>
+                    <p class="mb-2">El técnico podrá:</p>
+                    <ul class="list-disc list-inside ml-4 space-y-2">
+                        <li>**Producción Culinaria:** Dominar técnicas de cocina tradicional y vanguardista, en diferentes tipos de gastronomía (fría, caliente, repostería).</li>
+                        <li>**Control Gerencial:** Realizar el costeo de platillos, diseñar presupuestos operacionales y administrar inventarios de alimentos y bebidas.</li>
+                        <li>**Higiene y Calidad:** Implementar y monitorear sistemas de gestión de calidad, como HACCP, para garantizar la inocuidad de los alimentos.</li>
+                        <li>**Liderazgo:** Dirigir y capacitar personal de cocina, manteniendo un ambiente de trabajo seguro y eficiente.</li>
+                        <li>**Emprendimiento:** Desarrollar y gestionar su propio negocio gastronómico, incluyendo el diseño de menús rentables.</li>
+                    </ul>
+                    <p class="mt-6 text-sm text-gray-500 italic">Fuente: Basado en el Perfil Profesional de Especialidades de Turismo y Hospitalidad.</p>
+                `
+            },
+            // --- SERVICIOS EN ALIMENTOS Y BEBIDAS ---
             'ServiciosAlimentos': {
                 title: 'Plan de Estudios: Organización de Operaciones de Servicios en Alimentos y Bebidas',
                 content: `
@@ -490,7 +556,27 @@
                     </ul>
                     <p class="mt-6 text-sm text-gray-500 italic">Duración: 3 años de formación técnica (10°, 11° y 12°)</p>
                 `
-            }
+            },
+            'ServiciosAlimentosProfile': {
+                title: 'Perfil y Alcance Profesional: Servicios en Alimentos y Bebidas',
+                content: `
+                    <h4 class="text-xl font-bold mb-3 text-sky-700">Competencia General</h4>
+                    <p class="mb-4">
+                        Formar profesionales capaces de **organizar, ejecutar y supervisar las operaciones de servicio en establecimientos gastronómicos**, garantizando la calidad del servicio, el cumplimiento de protocolos de higiene y la satisfacción total del cliente.
+                    </p>
+
+                    <h4 class="text-xl font-bold mb-3 text-sky-700">Perfil del Egresado (Alcance)</h4>
+                    <p class="mb-2">El egresado podrá:</p>
+                    <ul class="list-disc list-inside ml-4 space-y-2">
+                        <li>**Servicio y Protocolo:** Dominar los métodos de servicio de mesa (europeo, americano), protocolo y etiqueta en restaurantes y hoteles.</li>
+                        <li>**Bebidas y Bar:** Preparar bebidas, cócteles y conocer el servicio adecuado de vinos y otras bebidas alcohólicas.</li>
+                        <li>**Gestión de Operaciones:** Controlar la rotación de inventarios, manejar el punto de venta (POS) y realizar el control de calidad en el área de servicio.</li>
+                        <li>**Eventos:** Planificar, cotizar y coordinar servicios de banquetes y eventos sociales o corporativos.</li>
+                        <li>**Atención al Cliente:** Resolver situaciones de conflicto y asegurar una experiencia de hospitalidad superior para generar lealtad.</li>
+                    </ul>
+                    <p class="mt-6 text-sm text-gray-500 italic">Fuente: Basado en el Perfil Profesional de Especialidades de Turismo y Hospitalidad.</p>
+                `
+            },
         };
 
         const modal = document.getElementById('curriculumModal');
@@ -498,8 +584,8 @@
         const modalContent = document.getElementById('modalContent');
 
         /**
-         * Muestra la ventana modal con el plan de estudios de la especialidad solicitada.
-         * @param {string} specialtyId - ID de la especialidad (e.g., 'ConstruccionCivil' o 'InformaticaProfile').
+         * Muestra la ventana modal con el plan de estudios o perfil solicitado.
+         * @param {string} specialtyId - ID de la especialidad (e.g., 'Informatica' o 'InformaticaProfile').
          */
         function showCurriculum(specialtyId) {
             const curriculum = curricula[specialtyId];
@@ -515,7 +601,7 @@
             } else {
                 // Manejo de error si la especialidad no existe o no tiene plan de estudio
                 modalTitle.textContent = 'Información No Disponible';
-                modalContent.innerHTML = '<p class="text-red-500">El plan de estudio para esta especialidad aún no se ha cargado en el sistema.</p>';
+                modalContent.innerHTML = '<p class="text-red-500">El plan de estudio o perfil para esta especialidad aún no se ha cargado en el sistema.</p>';
                 modal.classList.remove('hidden');
                 modal.classList.add('flex');
             }
